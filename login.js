@@ -90,17 +90,6 @@ const firebaseConfig = {
             });
     });
     
-    // Check if user is already logged in
-    // firebase.auth().onAuthStateChanged((user) => {
-    //     if (user) {
-    //         // User is signed in, redirect to dashboard
-    //         loginStatus.textContent = 'You are already logged in. Redirecting...';
-    //         setTimeout(() => {
-    //             window.location.href = 'indexes.html';
-    //         }, 1000);
-    //     }
-    // });
-    
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);

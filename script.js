@@ -147,23 +147,6 @@
                     });
             });
             
-            // Check if user is already logged in
-            // firebase.auth().onAuthStateChanged((user) => {
-            //     if (user) {
-            //         // User is signed in, check if they have a profile
-            //         db.collection('users').doc(user.uid).get()
-            //             .then((doc) => {
-            //                 if (doc.exists) {
-            //                     // User has completed registration, redirect to dashboard
-            //                     registerStatus.textContent = 'You are already registered. Redirecting...';
-            //                     setTimeout(() => {
-            //                         window.location.href = 'indexes.html';
-            //                     }, 1000);
-            //                 }
-            //             });
-            //     }
-            // });
-            
             function validateEmail(email) {
                 const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return re.test(email);
