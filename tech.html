@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Hub</title>
+  <link rel="stylesheet" href="tech.css" />
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <div class="tech">Tech</div>
+      <div class="lang">
+        <span class="c">C</span>
+        <span class="cpp">C++</span>
+        <span class="java">Java</span>
+        <span class="python">Python</span>
+        <span class="chash">C#</span>
+        <span class="js">JavaScript</span>
+        <span class="php">PHP</span>
+        <span class="sql">SQL</span>
+        <span class="html">HTML</span>
+      </div>
+    </div>
+    <div class="right-header">
+      <button id="dark-mode-toggle">🌙</button>
+      <button onclick="openQuiz()" class="quiz-btn">🧠 Quiz</button>
+      <button id="chat-toggle">💬 Chat</button>
+    </div>
+  </header>
+
+  <div id="quizModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeQuiz()">×</span>
+      <h3>Quick Quiz</h3>
+      <p>What does HTML stand for?</p>
+      <ul>
+        <li><button onclick="alert('Correct!')">Hyper Text Markup Language</button></li>
+        <li><button onclick="alert('Wrong!')">High Tech Markup Language</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="options" class="hidden">
+    <h3 id="lang-title">Options</h3>
+    <ul>
+      <li class="dropdown">
+        <span class="dropdown-title">Documentation <span class="arrow">▼</span></span>
+        <ul class="submenu">
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Basics</a></li>
+          <li><a href="#">Examples</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">CodeHelp</a></li>
+      <li><a href="#">Others</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="intro">
+      <h1>Welcome to Technical Hub</h1>
+      <p>Empowering developers with tutorials, resources, and community support.</p>
+    </section>
+
+    <section class="topics">
+      <h2>Explore Programming Languages</h2>
+      <div class="topic-grid">
+        <!-- Topic cards -->
+        <div class="topic-box"><h3>C</h3><p>Learn structured programming with C.</p></div>
+        <div class="topic-box"><h3>C++</h3><p>Object-oriented programming and DS.</p></div>
+        <div class="topic-box"><h3>Java</h3><p>Build scalable apps using Java.</p></div>
+        <div class="topic-box"><h3>Python</h3><p>AI, ML, automation and more.</p></div>
+        <div class="topic-box"><h3>C#</h3><p>Windows and game development.</p></div>
+        <div class="topic-box"><h3>JavaScript</h3><p>Dynamic and interactive websites.</p></div>
+        <div class="topic-box"><h3>PHP</h3><p>Backend development made easy.</p></div>
+        <div class="topic-box"><h3>SQL</h3><p>Database management and querying.</p></div>
+      </div>
+    </section>
+
+    <section class="code-editor">
+      <h2>Try Code Live</h2>
+      <textarea id="code-input" placeholder="Write your code here..."></textarea>
+      <button onclick="runCode()">Run Code</button>
+      <iframe id="output" sandbox="allow-scripts"></iframe>
+    </section>
+
+    <section class="resources">
+      <h2>Resources & Learning Materials</h2>
+      <ul>
+        <li><a href="#">Interactive Coding Challenges</a></li>
+        <li><a href="#">Step-by-Step Tutorials</a></li>
+        <li><a href="#">Comprehensive Documentation</a></li>
+        <li><a href="#">Community Support & Code Help</a></li>
+        <li><a href="#">Video Tutorials & Live Sessions</a></li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Start Your Learning Journey!</h2>
+      <p>Join our community, learn, and grow with real-world coding practice.</p>
+      <button>Get Started</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Technical Hub</h3>
+        <p>Your coding partner from basics to advanced programming.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Forum</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:support@technicalhub.com">support@technicalhub.com</a></p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+      <div class="footer-section">
+        <h3>Social</h3>
+        <p>
+          <a href="#">Facebook</a> |
+          <a href="#">Twitter</a> |
+          <a href="#">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Technical Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="chatbot" class="hidden">
+    <div id="chat-header">Chatbot Assistant <span id="close-chat">✖</span></div>
+    <div id="chat-content"></div>
+  </div>
+
+  <script src="tech.js"></script>
+</body>
+</html>
